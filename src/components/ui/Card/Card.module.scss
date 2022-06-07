@@ -1,0 +1,17 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.component {
+  border-radius: 40px;
+  border: 3px solid $card-border;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  max-width: calc(90vw - 160px);
+  max-height: calc(90vh - 120px);
+  width: calc(800px - 160px);
+  height: calc(800px - 160px);
+}

@@ -1,0 +1,15 @@
+$main-base-color: #000;
+$main-blue-color: #6781C6;
+
+$card-border: lighten($main-blue-color, 30%);
+
+$main-text-color: $main-base-color;
+$light-text-color: lighten($main-base-color, 25%);
+$main-blue-text-color: $main-blue-color;
+$light-blue-text-color: lighten($main-blue-color, 25%);
+
+$large-title-size: 4rem; // 64
+$small-title-size: 3rem; // 48
+$large-text-size: 2.5rem; // 36
+$middle-text-size: 2rem; // 32
+$small-text-size: 1.5rem; // 24

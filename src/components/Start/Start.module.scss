@@ -1,7 +1,36 @@
-.button {
-  border: none;
-  border-radius: 8px;
-  background-color: #1db61d;
-  padding: 8px 16px;
-  cursor: pointer;
+@import "../../styles/variables";
+
+h1 {
+  font-size: $large-title-size;
+  font-weight: bold;
+  margin: 0;
+}
+
+.middleText {
+  font-size: $middle-text-size;
+  text-align: center;
+}
+
+.smallText {
+  font-size: $small-text-size;
+  text-align: center;
+}
+
+.lightText {
+  color: $light-text-color;
+}
+
+.blueText {
+  color: $main-blue-text-color;
+}
+
+.needBlock {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  img,
+  span {
+    margin: auto;
+  }
 }
