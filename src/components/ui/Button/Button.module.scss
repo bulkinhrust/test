@@ -1,0 +1,28 @@
+@import "../../../styles/variables";
+
+.component {
+  padding: 0 30px;
+  height: 80px;
+  border-radius: 20px;
+  color: $main-blue-color;
+  border: none;
+  background-color: transparent;
+  font-size: $small-text-size;
+
+  &:hover {
+    background-color: lighten($main-blue-color, 38%);
+    transition: background-color ease 0.3s;
+  }
+}
+
+.bordered {
+  border: 2px solid $main-blue-color;
+}
+
+@media (max-width: 750px) {
+  .component {
+    height: 10.5vw;
+    border-radius: 1.2rem;
+    padding: 0 1.9rem;
+  }
+}

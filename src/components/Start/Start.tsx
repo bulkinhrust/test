@@ -5,6 +5,7 @@ import Card from '../ui/Card';
 import classes from './Start.module.scss';
 import hourglass from './assets/hourglass.svg';
 import brain from './assets/brain.svg';
+import Button from '../ui/Button';
 
 type EndProps = {
   start: () => void;
@@ -20,8 +21,8 @@ const Start: React.FC<EndProps> = ({ start }) => (
     </span>
     <span className={clsx(classes.middleText, classes.blueText)}>Вам понадобятся:</span>
     <div className={clsx(classes.needBlock, classes.smallText, classes.blueText)}>
-      <img src={hourglass} />
-      <img src={brain} />
+      <img src={hourglass} alt="Песочные часы" />
+      <img src={brain} alt="Мозг" />
       <span>5 минут</span>
       <span>(опционально)</span>
     </div>
@@ -30,7 +31,7 @@ const Start: React.FC<EndProps> = ({ start }) => (
       и получите уникальное предложение,<br />
       от которого невозможно отказаться
     </span>
-    <button onClick={start} className={classes.button}>Чтож, приступим --&gt;</button>
+    <Button onClick={start} bordered>Чтож, приступим --&gt;</Button>
   </Card>
 );
 
