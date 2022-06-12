@@ -1,22 +1,18 @@
 import React from 'react';
 import clsx from 'clsx';
 
-import classes from './Button.module.scss';
+import classes from './Field.module.scss';
 
 type Props = {
   active?: boolean;
-  bordered?: boolean;
-  fullWidth?: boolean;
-  disabled?: boolean;
   onClick: () => void;
   className?: string;
 };
 
-const Button: React.FC<Props> = (props) => {
+const Field: React.FC<Props> = (props) => {
   const {
     children,
-    bordered,
-    disabled,
+    active,
     onClick,
     className,
   } = props;
@@ -25,8 +21,7 @@ const Button: React.FC<Props> = (props) => {
     <button
       className={clsx({
         [classes.component]: true,
-        [classes.bordered]: bordered,
-        [classes.disabled]: disabled,
+        [classes.active]: !!active,
         [`${className}`]: !!className,
       })}
       onClick={onClick}
@@ -36,4 +31,4 @@ const Button: React.FC<Props> = (props) => {
   );
 };
 
-export default Button;
+export default Field;

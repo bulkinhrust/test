@@ -1,7 +1,7 @@
 const initialAnswers = {
-  alcoholic: 0,
-  glutton: 0,
-  romantic: 0,
+  1: 0,
+  2: 0,
+  3: 0,
 };
 
 export default initialAnswers;

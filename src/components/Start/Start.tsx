@@ -6,11 +6,11 @@ import classes from './Start.module.scss';
 import hourglass from './assets/hourglass.svg';
 import brain from './assets/brain.svg';
 import Button from '../ui/Button';
+import Arrow from '../ui/Arrow';
 
 type EndProps = {
   start: () => void;
 };
-
 
 const Start: React.FC<EndProps> = ({ start }) => (
   <Card>
@@ -31,7 +31,10 @@ const Start: React.FC<EndProps> = ({ start }) => (
       и получите уникальное предложение,<br />
       от которого невозможно отказаться
     </span>
-    <Button onClick={start} bordered>Чтож, приступим --&gt;</Button>
+    <Button onClick={start} bordered className={classes.button}>
+      <span>Чтож, приступим</span>
+      <Arrow className={classes.arrow} direction="right" />
+    </Button>
   </Card>
 );
 

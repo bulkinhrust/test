@@ -1,3 +1,3 @@
-type Answer = 'alcoholic' | 'glutton' | 'romantic';
+type Answer = '1' | '2' | '3';
 
 export default Answer;

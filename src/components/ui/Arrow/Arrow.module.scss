@@ -1,0 +1,11 @@
+.component {
+  width: 23px;
+  height: 23px;
+}
+
+@media (max-width: 750px) {
+  .component {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

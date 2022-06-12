@@ -6,33 +6,26 @@
   gap: 6px;
   padding: 20px;
   border-radius: 20px;
-  color: $main-blue-color;
-  stroke: $main-blue-color;
   border: none;
-  background-color: transparent;
   font-size: $middle-text-size;
+  background-color: lighten($main-blue-color, 38%);
+  width: 100%;
 
   &:hover {
-    background-color: lighten($main-blue-color, 38%);
     transition: background-color ease 0.3s;
+    color: $main-blue-color;
   }
+}
 
-  &:active {
-    background-color: $main-blue-color;
+.active {
+  background-color: $main-blue-color;
+  color: #fff;
+  stroke: #fff;
+
+  &:hover {
     color: #fff;
     stroke: #fff;
   }
-}
-
-.bordered {
-  border: 2px solid $main-blue-color;
-}
-
-.disabled {
-  pointer-events: none;
-  color: $disabled-color;
-  stroke: $disabled-color;
-  border-color: $disabled-color;
 }
 
 @media (max-width: 750px) {

@@ -2,20 +2,22 @@ $main-base-color: #000;
 $main-blue-color: #6781C6;
 
 $card-border: lighten($main-blue-color, 30%);
+$disabled-color: lighten($main-base-color, 85%);
 
 $main-text-color: $main-base-color;
 $light-text-color: lighten($main-base-color, 25%);
 $main-blue-text-color: $main-blue-color;
 $light-blue-text-color: lighten($main-blue-color, 25%);
 
-$large-title-size: 3rem; // 48
-$small-title-size: 2.5rem; // 36
+$large-title-size: 3.2rem; // 48
+$middle-title-size: 2.5rem; // 36
+$small-title-size: 2rem; //
 $large-text-size: 1.5rem; // 24
-$middle-text-size: 1.25rem; // 20
-$small-text-size: 1rem; // 16
+$middle-text-size: 1.35rem; // 20
+$small-text-size: 1.1rem; // 16
 
 $large-title-size-px: 48px;
-$small-title-size-px: 36px;
+$middle-title-size-px: 36px;
 $large-text-size-px: 24px;
 $middle-text-size-px: 20px;
 $small-text-size-px: 16px;

@@ -35,9 +35,19 @@ h1 {
   }
 }
 
+.arrow {
+  transition: transform 300ms ease;
+}
+
+.button:hover {
+  .arrow {
+    transform: translate(10px);
+  }
+}
+
 @media (max-width: 750px) {
-  img {
-    width: 3.7rem;
-    height: 3.7rem;
+  .needBlock img {
+    width: 3.9rem;
+    height: 3.9rem;
   }
 }

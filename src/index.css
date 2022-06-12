@@ -1,5 +1,5 @@
 html {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 body {
@@ -12,9 +12,9 @@ body {
   height: 100vh;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 480px) {
   html {
-    font-size: 2.15vw;
+    font-size: 3.15vw;
   }
 }
 

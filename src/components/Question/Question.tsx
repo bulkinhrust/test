@@ -1,24 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Answer, Question as QuestionType } from '../../types';
 import classes from './Question.module.scss';
+import Card from '../ui/Card';
+import Field from '../ui/Field';
+import Button from '../ui/Button';
+import Arrow from '../ui/Arrow';
 
 type QuestionProps = {
   question: QuestionType;
   handleAnswer: (answer: Answer) => void;
+  goBack: () => void;
 };
 
 const Question: React.FC<QuestionProps> = (props) => {
-  const { question: { question, answers }, handleAnswer } = props;
+  const { question: { question, answers }, handleAnswer, goBack } = props;
+  const [active, setActive] = useState<Answer | null>(null);
+
+  const handleGoBack = () => {
+    setActive(null);
+    goBack();
+  };
+
+  const handleGoForward = () => {
+    if (active) {
+      handleAnswer(active);
+    }
+    setActive(null);
+  };
+
   return (
-    <div className={classes.container}>
-      <h2>{question}</h2>
+    <Card>
+      <h2 className={classes.title}>{question.map((string) => <span key={string}>{string}</span>)}</h2>
       <ul className={classes.list}>
-        <button className={classes.button} onClick={() => handleAnswer(answers.a.type)}>a) {answers.a.title}</button>
-        <button className={classes.button} onClick={() => handleAnswer(answers.b.type)}>b) {answers.b.title}</button>
-        <button className={classes.button} onClick={() => handleAnswer(answers.c.type)}>c) {answers.c.title}</button>
+        <Field onClick={() => setActive(answers.a.type)} active={active === answers.a.type}>{answers.a.title}</Field>
+        <Field onClick={() => setActive(answers.b.type)} active={active === answers.b.type}>{answers.b.title}</Field>
+        <Field onClick={() => setActive(answers.c.type)} active={active === answers.c.type}>{answers.c.title}</Field>
       </ul>
-    </div>
+      <div className={classes.buttons}>
+        <Button onClick={handleGoBack} bordered>
+          <Arrow direction="left" />
+        </Button>
+        <Button onClick={handleGoForward} bordered disabled={!active}>
+          <Arrow direction="right" />
+        </Button>
+      </div>
+    </Card>
   );
 }
 
