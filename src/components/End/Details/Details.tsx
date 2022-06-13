@@ -7,7 +7,7 @@ const colors = ['#FAE5D9', '#F4DCE1', '#DCECD4', '#BEC7D1', '#6A3517', '#671729'
 const Details: React.FC = () => (
   <div className={classes.container}>
     <h2>Ура, это наконец закончилось!</h2>
-    <h3>Наслаждайтесь своим уникальным приглашением и обязательно читайте подробности ниже.</h3>
+    <h3>Наслаждайтесь уникальным приглашением, сгенерированным на основе ваших ответов, и обязательно читайте подробности ниже.</h3>
     <div><strong>Дата церемонии: </strong>20 августа</div>
     <div><strong>Время начала: </strong>17:00 (приезжайте заранее)</div>
     <div><strong>Место: </strong>г.Ставрополь, ул.Мичурина 102/2</div>
@@ -21,7 +21,7 @@ const Details: React.FC = () => (
       - Не надевайте слишком яркую или пёструю одежду. Предпочтите этому пастельные или приглушенные тёмные оттенки.
       В помощь вам внизу указаны примерные цвета, которые нравятся невесте.
     </div>
-    <div className={classes.palette}>{colors.map((color) => <span style={{ backgroundColor: color }} />)}</div>
+    <div className={classes.palette}>{colors.map((color) => <span key={color} style={{ backgroundColor: color }} />)}</div>
   </div>
 );
 

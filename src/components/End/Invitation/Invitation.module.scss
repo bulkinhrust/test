@@ -11,6 +11,16 @@
   }
 }
 
+.link {
+  text-decoration: none;
+  width: 100%;
+}
+
+.share {
+  display: flex;
+  gap: 14px;
+}
+
 @media (min-width: 480px) {
   .container,
   .bar {

@@ -7,9 +7,10 @@ type Props = {
   active?: boolean;
   variant?: 'outline' | 'fill';
   type?: 'primary' | 'danger';
+  size?: 'small' | 'large';
   fullWidth?: boolean;
   disabled?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
   className?: string;
 };
 
@@ -19,6 +20,7 @@ const Button: React.FC<Props> = (props) => {
     fullWidth,
     variant = 'outline',
     type = 'primary',
+    size = 'large',
     disabled,
     onClick,
     className,
@@ -30,6 +32,7 @@ const Button: React.FC<Props> = (props) => {
         [classes.component]: true,
         [classes[variant]]: true,
         [classes[type]]: true,
+        [classes[size]]: true,
         [classes.fullWidth]: fullWidth,
         [classes.disabled]: disabled,
         [`${className}`]: !!className,
