@@ -1,12 +1,16 @@
 @import "../../styles/variables";
 
 .title {
-  font-size: $small-title-size;
+  font-size: $middle-title-size;
   font-weight: 500;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
+}
+
+.smallTitle {
+  font-size: $small-title-size;
 }
 
 .list {

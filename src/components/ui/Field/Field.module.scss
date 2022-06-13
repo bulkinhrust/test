@@ -10,6 +10,7 @@
   font-size: $middle-text-size;
   background-color: lighten($main-blue-color, 38%);
   width: 100%;
+  text-align: left;
 
   &:hover {
     transition: background-color ease 0.3s;

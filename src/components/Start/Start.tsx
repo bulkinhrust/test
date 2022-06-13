@@ -31,8 +31,8 @@ const Start: React.FC<EndProps> = ({ start }) => (
       и получите уникальное предложение,<br />
       от которого невозможно отказаться
     </span>
-    <Button onClick={start} bordered className={classes.button}>
-      <span>Чтож, приступим</span>
+    <Button onClick={start} className={classes.button}>
+      <span>Что ж, приступим</span>
       <Arrow className={classes.arrow} direction="right" />
     </Button>
   </Card>

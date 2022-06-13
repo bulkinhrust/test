@@ -5,7 +5,8 @@ import classes from './Button.module.scss';
 
 type Props = {
   active?: boolean;
-  bordered?: boolean;
+  variant?: 'outline' | 'fill';
+  type?: 'primary' | 'danger';
   fullWidth?: boolean;
   disabled?: boolean;
   onClick: () => void;
@@ -15,7 +16,9 @@ type Props = {
 const Button: React.FC<Props> = (props) => {
   const {
     children,
-    bordered,
+    fullWidth,
+    variant = 'outline',
+    type = 'primary',
     disabled,
     onClick,
     className,
@@ -25,7 +28,9 @@ const Button: React.FC<Props> = (props) => {
     <button
       className={clsx({
         [classes.component]: true,
-        [classes.bordered]: bordered,
+        [classes[variant]]: true,
+        [classes[type]]: true,
+        [classes.fullWidth]: fullWidth,
         [classes.disabled]: disabled,
         [`${className}`]: !!className,
       })}

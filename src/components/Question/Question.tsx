@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import clsx from 'clsx';
 
 import { Answer, Question as QuestionType } from '../../types';
 import classes from './Question.module.scss';
@@ -31,17 +32,19 @@ const Question: React.FC<QuestionProps> = (props) => {
 
   return (
     <Card>
-      <h2 className={classes.title}>{question.map((string) => <span key={string}>{string}</span>)}</h2>
+      <h2 className={clsx(classes.title, question.length > 2 ? classes.smallTitle : '')}>
+        {question.map((string) => <span key={string}>{string}</span>)}
+      </h2>
       <ul className={classes.list}>
         <Field onClick={() => setActive(answers.a.type)} active={active === answers.a.type}>{answers.a.title}</Field>
         <Field onClick={() => setActive(answers.b.type)} active={active === answers.b.type}>{answers.b.title}</Field>
         <Field onClick={() => setActive(answers.c.type)} active={active === answers.c.type}>{answers.c.title}</Field>
       </ul>
       <div className={classes.buttons}>
-        <Button onClick={handleGoBack} bordered>
+        <Button onClick={handleGoBack}>
           <Arrow direction="left" />
         </Button>
-        <Button onClick={handleGoForward} bordered disabled={!active}>
+        <Button onClick={handleGoForward} disabled={!active}>
           <Arrow direction="right" />
         </Button>
       </div>

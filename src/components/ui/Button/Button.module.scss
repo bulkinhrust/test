@@ -8,13 +8,15 @@
   border-radius: 20px;
   color: $main-blue-color;
   stroke: $main-blue-color;
-  border: none;
+  border: 2px solid $main-blue-color;
   background-color: transparent;
   font-size: $middle-text-size;
+  transition: background-color ease 0.3s;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     background-color: lighten($main-blue-color, 38%);
-    transition: background-color ease 0.3s;
   }
 
   &:active {
@@ -24,8 +26,46 @@
   }
 }
 
-.bordered {
-  border: 2px solid $main-blue-color;
+.fill {
+  background-color: $main-blue-color;
+  color: #fff;
+  stroke: #fff;
+
+  &:hover {
+    background-color: darken($main-blue-color, 5%);
+  }
+  &:active {
+    background-color: darken($main-blue-color, 15%);
+  }
+}
+
+.start {
+  justify-content: start;
+}
+
+.component.danger {
+  color: $main-red-color;
+  stroke: $main-red-color;
+  border: 2px solid $main-red-color;
+
+  &:hover {
+    background-color: lighten($main-red-color, 38%);
+  }
+
+  &:active {
+    background-color: $main-red-color;
+  }
+}
+
+.component.danger.fill {
+  background-color: $main-red-color;
+
+  &:hover {
+    background-color: darken($main-red-color, 5%);
+  }
+  &:active {
+    background-color: darken($main-red-color, 15%);
+  }
 }
 
 .disabled {
@@ -33,6 +73,10 @@
   color: $disabled-color;
   stroke: $disabled-color;
   border-color: $disabled-color;
+}
+
+.fullWidth {
+  width: 100%;
 }
 
 @media (max-width: 750px) {

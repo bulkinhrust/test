@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  width: 1000px;
+  max-width: 80vw;
+  margin: auto;
+  gap: 2.8rem;
+
+  hr {
+    border: 1px solid #6781C6;
+    width: 100%;
+  }
+}
+
+
+
+.details {
+  width: 100%;
+  overflow: auto;
+}
+
+@media (min-width: 480px) {
+  .container {
+    gap: 40px;
+  }
+
+  .pic,
+  .bar {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 960px) {
+  .container {
+    flex-direction: row;
+    max-width: 90vw;
+    gap: 60px;
+
+    hr {
+      align-self: stretch;
+      width: auto;
+    }
+  }
+}

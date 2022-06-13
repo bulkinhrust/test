@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Answer } from '../../types';
 import classes from './End.module.scss';
+import Invitation from './Invitation';
+import Details from './Details';
 
 type EndProps = {
   answers: { [key in Answer]: number };
@@ -21,8 +23,9 @@ const End: React.FC<EndProps> = ({ answers, age, reset }) => {
   const leader = (Object.keys(answers) as Answer[]).find((answerKey) => (answers[answerKey] === maxValue));
   return (
     <div className={classes.container}>
-      <h2>{endText[leader || 'none']} {age}</h2>
-      <button onClick={reset}>Пройти тест еще раз</button>
+      <Invitation reset={reset} />
+      <hr />
+      <Details />
     </div>
   );
 }
