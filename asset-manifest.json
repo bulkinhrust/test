@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wedding_test/static/css/main.3615de65.chunk.css",
-    "main.js": "/wedding_test/static/js/main.815ed39b.chunk.js",
-    "main.js.map": "/wedding_test/static/js/main.815ed39b.chunk.js.map",
+    "main.js": "/wedding_test/static/js/main.134b8ba5.chunk.js",
+    "main.js.map": "/wedding_test/static/js/main.134b8ba5.chunk.js.map",
     "runtime-main.js": "/wedding_test/static/js/runtime-main.ba6dd6c2.js",
     "runtime-main.js.map": "/wedding_test/static/js/runtime-main.ba6dd6c2.js.map",
     "static/js/2.10c99f0c.chunk.js": "/wedding_test/static/js/2.10c99f0c.chunk.js",
@@ -19,13 +19,13 @@
     "static/media/pic22.fb5c1a0b.png": "/wedding_test/static/media/pic22.fb5c1a0b.png",
     "static/media/pic23.864160bc.png": "/wedding_test/static/media/pic23.864160bc.png",
     "static/media/pic31.19da0aad.png": "/wedding_test/static/media/pic31.19da0aad.png",
-    "static/media/pic32.e2194aa3.png": "/wedding_test/static/media/pic32.e2194aa3.png",
+    "static/media/pic32.c34222f0.png": "/wedding_test/static/media/pic32.c34222f0.png",
     "static/media/pic33.83740217.png": "/wedding_test/static/media/pic33.83740217.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ba6dd6c2.js",
     "static/js/2.10c99f0c.chunk.js",
     "static/css/main.3615de65.chunk.css",
-    "static/js/main.815ed39b.chunk.js"
+    "static/js/main.134b8ba5.chunk.js"
   ]
 }
