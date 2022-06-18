@@ -1,23 +1,31 @@
 {
   "files": {
-    "main.css": "/wedding_test/static/css/main.4d8eecc1.chunk.css",
-    "main.js": "/wedding_test/static/js/main.2f801e63.chunk.js",
-    "main.js.map": "/wedding_test/static/js/main.2f801e63.chunk.js.map",
+    "main.css": "/wedding_test/static/css/main.3615de65.chunk.css",
+    "main.js": "/wedding_test/static/js/main.815ed39b.chunk.js",
+    "main.js.map": "/wedding_test/static/js/main.815ed39b.chunk.js.map",
     "runtime-main.js": "/wedding_test/static/js/runtime-main.ba6dd6c2.js",
     "runtime-main.js.map": "/wedding_test/static/js/runtime-main.ba6dd6c2.js.map",
-    "static/js/2.1b68b60a.chunk.js": "/wedding_test/static/js/2.1b68b60a.chunk.js",
-    "static/js/2.1b68b60a.chunk.js.map": "/wedding_test/static/js/2.1b68b60a.chunk.js.map",
+    "static/js/2.10c99f0c.chunk.js": "/wedding_test/static/js/2.10c99f0c.chunk.js",
+    "static/js/2.10c99f0c.chunk.js.map": "/wedding_test/static/js/2.10c99f0c.chunk.js.map",
     "index.html": "/wedding_test/index.html",
-    "static/css/main.4d8eecc1.chunk.css.map": "/wedding_test/static/css/main.4d8eecc1.chunk.css.map",
-    "static/js/2.1b68b60a.chunk.js.LICENSE.txt": "/wedding_test/static/js/2.1b68b60a.chunk.js.LICENSE.txt",
+    "static/css/main.3615de65.chunk.css.map": "/wedding_test/static/css/main.3615de65.chunk.css.map",
+    "static/js/2.10c99f0c.chunk.js.LICENSE.txt": "/wedding_test/static/js/2.10c99f0c.chunk.js.LICENSE.txt",
     "static/media/brain.5593032a.svg": "/wedding_test/static/media/brain.5593032a.svg",
     "static/media/hourglass.987b9247.svg": "/wedding_test/static/media/hourglass.987b9247.svg",
-    "static/media/pic21.daf427b3.png": "/wedding_test/static/media/pic21.daf427b3.png"
+    "static/media/pic11.4f204235.png": "/wedding_test/static/media/pic11.4f204235.png",
+    "static/media/pic12.f0ac1dfe.png": "/wedding_test/static/media/pic12.f0ac1dfe.png",
+    "static/media/pic13.42602b97.png": "/wedding_test/static/media/pic13.42602b97.png",
+    "static/media/pic21.3b37fda8.png": "/wedding_test/static/media/pic21.3b37fda8.png",
+    "static/media/pic22.fb5c1a0b.png": "/wedding_test/static/media/pic22.fb5c1a0b.png",
+    "static/media/pic23.864160bc.png": "/wedding_test/static/media/pic23.864160bc.png",
+    "static/media/pic31.19da0aad.png": "/wedding_test/static/media/pic31.19da0aad.png",
+    "static/media/pic32.e2194aa3.png": "/wedding_test/static/media/pic32.e2194aa3.png",
+    "static/media/pic33.83740217.png": "/wedding_test/static/media/pic33.83740217.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ba6dd6c2.js",
-    "static/js/2.1b68b60a.chunk.js",
-    "static/css/main.4d8eecc1.chunk.css",
-    "static/js/main.2f801e63.chunk.js"
+    "static/js/2.10c99f0c.chunk.js",
+    "static/css/main.3615de65.chunk.css",
+    "static/js/main.815ed39b.chunk.js"
   ]
 }
