@@ -31,12 +31,14 @@ const Modal: React.FC<Props> = (props) => {
 
   const content = (
     <div className={classes.popover} onClick={onClose}>
-      <div className={classes.modal}>
-        <h3 className={classes.title}>{title}</h3>
-        {children}
-        <div className={classes.actions}>
-          {submitTitle && <Button type="danger" variant="fill" size="small" onClick={onSubmit}>{submitTitle}</Button>}
-          {cancelTitle && <Button type="danger" size="small" onClick={onClose}>{cancelTitle}</Button>}
+      <div className={classes.modalWrapper}>
+        <div className={classes.modal}>
+          <h3 className={classes.title}>{title}</h3>
+          {children}
+          <div className={classes.actions}>
+            {submitTitle && <Button type="danger" variant="fill" size="small" onClick={onSubmit}>{submitTitle}</Button>}
+            {cancelTitle && <Button type="danger" size="small" onClick={onClose}>{cancelTitle}</Button>}
+          </div>
         </div>
       </div>
     </div>
