@@ -9,6 +9,8 @@ import Button from '../../ui/Button';
 import Modal from '../../ui/Modal';
 import classes from './Invitation.module.scss';
 import {Answer} from '../../../types';
+import Download from '../../ui/Download';
+import Share from '../../ui/Share';
 
 type Props = {
   answers: { [key in number]: Answer; };
@@ -74,9 +76,15 @@ const Invitation: React.FC<Props> = (props) => {
       <img src={image} alt="открытка" className={classes.invitation} />
       <div className={classes.bar}>
         <a href={image} target="_blank" rel="noopener noreferrer" download="Приглашение.png" className={classes.link}>
-          <Button variant="fill" fullWidth>Скачать</Button>
+          <Button variant="fill" fullWidth className={classes.downloadButton}>
+            <span>Скачать</span>
+            <Download className={classes.downloadIcon} />
+          </Button>
         </a>
-        <Button onClick={() => setIsShareModalOpen(true)} fullWidth>Отправить</Button>
+        <Button onClick={() => setIsShareModalOpen(true)} fullWidth className={classes.shareButton}>
+          <span>Отправить</span>
+          <Share className={classes.shareIcon} />
+        </Button>
       </div>
       <Button onClick={() => setIsResetModalOpen(true)} type="danger" fullWidth>Хочу пройти тест ещё раз!</Button>
     </div>

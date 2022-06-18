@@ -21,6 +21,26 @@
   gap: 14px;
 }
 
+.downloadIcon {
+  transition: transform 300ms ease;
+}
+
+.downloadButton:hover {
+  .downloadIcon {
+    transform: translateY(10px);
+  }
+}
+
+.shareIcon {
+  transition: transform 300ms ease;
+}
+
+.shareButton:hover {
+  .shareIcon {
+    transform: translateY(-10px);
+  }
+}
+
 @media (min-width: 480px) {
   .container,
   .bar {

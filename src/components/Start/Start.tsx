@@ -23,7 +23,7 @@ const Start: React.FC<EndProps> = ({ start }) => (
     <div className={clsx(classes.needBlock, classes.smallText, classes.blueText)}>
       <img src={hourglass} alt="Песочные часы" />
       <img src={brain} alt="Мозг" />
-      <span>5 минут</span>
+      <span>2 минуты</span>
       <span>(опционально)</span>
     </div>
     <span className={clsx(classes.smallText, classes.lightText)}>
