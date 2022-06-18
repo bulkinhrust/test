@@ -6,7 +6,7 @@ import Invitation from './Invitation';
 import Details from './Details';
 
 type EndProps = {
-  answers: { [key in Answer]: number };
+  answers: { [key in number]: Answer; };
   age?: Answer;
   reset: () => void;
 };

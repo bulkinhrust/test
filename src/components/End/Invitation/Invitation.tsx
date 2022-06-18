@@ -11,10 +11,12 @@ import classes from './Invitation.module.scss';
 import {Answer} from '../../../types';
 
 type Props = {
-  answers: { [key in Answer]: number };
+  answers: { [key in number]: Answer; };
   age?: Answer;
   reset: () => void;
 };
+
+const MESSAGE = "Серёга и Маринка женятся!"
 
 const Invitation: React.FC<Props> = (props) => {
   const { answers, age, reset } = props;
@@ -24,8 +26,15 @@ const Invitation: React.FC<Props> = (props) => {
   let image;
 
   if (!localStorage.getItem('result')) {
-    const maxValue = Math.max(...Object.values(answers));
-    const leader = (Object.keys(answers) as Answer[]).find((answerKey) => (answers[answerKey] === maxValue));
+    const results = Object.values(answers).reduce(
+      (acc, value) => {
+        acc[value] = acc[value] + 1;
+        return acc;
+      },
+      { 1: 0, 2: 0, 3: 0 },
+    );
+    const maxValue = Math.max(...Object.values(results));
+    const leader = (Object.keys(results) as Answer[]).find((answerKey) => (results[answerKey] === maxValue));
     image = invitations[`pic${age}${leader}` as keyof typeof invitations];
     localStorage.setItem('result', `pic${age}${leader}`);
   } else {
@@ -51,13 +60,13 @@ const Invitation: React.FC<Props> = (props) => {
         onClose={() => setIsShareModalOpen(false)}
       >
         <div className={classes.share}>
-          <TelegramShareButton title="Они женятся!!" url={`https://bulkinhrust.github.io${image}`}>
+          <TelegramShareButton title={MESSAGE} url={`https://bulkinhrust.github.io${image}`}>
             <TelegramIcon size={40} borderRadius={20} />
           </TelegramShareButton>
-          <WhatsappShareButton title="Они женятся!!" url={`https://bulkinhrust.github.io${image}`}>
+          <WhatsappShareButton title={MESSAGE} url={`https://bulkinhrust.github.io${image}`}>
             <WhatsappIcon size={40} borderRadius={20} />
           </WhatsappShareButton>
-          <VKShareButton title="Они женятся!!" url={`https://bulkinhrust.github.io${image}`}>
+          <VKShareButton title={MESSAGE} url={`https://bulkinhrust.github.io${image}`}>
             <VKIcon size={40} borderRadius={20} />
           </VKShareButton>
         </div>

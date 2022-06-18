@@ -4,18 +4,18 @@ import QuestionComponent from '../Question';
 import Start from '../Start';
 import End from '../End';
 import { Answer } from '../../types';
-import { questions, initialAnswers } from '../../constants';
+import { questions } from '../../constants';
 import classes from './App.module.scss';
 
 type Answers = {
-  [key in Answer]: number;
+  [key in number]: Answer;
 };
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [step, setStep] = useState<'start' | number>('start');
   const [age, setAge] = useState<Answer>();
-  const [answers, setAnswers] = useState<Answers>(initialAnswers);
+  const [answers, setAnswers] = useState<Answers>({});
 
   useEffect(() => {
     const result = localStorage.getItem('result');
@@ -40,7 +40,7 @@ const App: React.FC = () => {
     } else {
       const newAnswers = {
         ...answers,
-        [type]: answers[type] + 1,
+        [step]: type,
       };
       setAnswers(newAnswers);
       localStorage.setItem('answers', JSON.stringify(newAnswers));
@@ -59,7 +59,7 @@ const App: React.FC = () => {
 
   const reset = () => {
     setStep('start');
-    setAnswers(initialAnswers);
+    setAnswers({});
     localStorage.setItem('answers', '');
     localStorage.setItem('age', '');
     localStorage.setItem('result', '');
