@@ -1,8 +1,8 @@
 {
-  "name": "wedding_test",
+  "name": "test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bulkinhrust.github.io/wedding_test",
+  "homepage": "https://bulkinhrust.github.io/test",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
